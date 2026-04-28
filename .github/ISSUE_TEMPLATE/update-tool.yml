@@ -1,0 +1,39 @@
+name: Update a tool
+description: Suggest an update to an existing catalog entry.
+title: "[Tool Update] "
+labels: ["tool-update"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Which catalog page contains the tool?
+      placeholder: "apps/docs/content/docs/catalog/map-tools.md"
+    validations:
+      required: true
+
+  - type: input
+    id: tool_name
+    attributes:
+      label: Tool name
+      description: Name of the existing tool.
+      placeholder: "HOI4 Province Editor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: requested_change
+    attributes:
+      label: Requested change
+      description: What should be updated?
+      placeholder: "The repository moved to a new URL..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links or references that support the update.
+    validations:
+      required: false

@@ -1,0 +1,23 @@
+{
+  "name": "hoi4-modding-tools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A curated collection of tools and resources for Hearts of Iron IV mod development.",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "docs:dev": "npm --workspace apps/docs run dev",
+    "docs:dev:turbo": "npm --workspace apps/docs run dev:turbo",
+    "docs:build": "npm --workspace apps/docs run build",
+    "docs:start": "npm --workspace apps/docs run start",
+    "docs:types": "npm --workspace apps/docs run types:check",
+    "docs:clean": "npm --workspace apps/docs run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LesMiserablesMod/hoi4-modding-tools.git"
+  },
+  "workspaces": [
+    "apps/*",
+    "tools/*"
+  ]
+}

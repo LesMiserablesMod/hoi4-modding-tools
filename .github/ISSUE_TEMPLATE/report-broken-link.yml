@@ -1,0 +1,30 @@
+name: Report a broken link
+description: Report a broken or outdated link in the catalog.
+title: "[Broken Link] "
+labels: ["broken-link"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Which page contains the broken link?
+      placeholder: "apps/docs/content/docs/catalog/map-tools.md"
+    validations:
+      required: true
+
+  - type: input
+    id: broken_link
+    attributes:
+      label: Broken link
+      description: Paste the broken or outdated link.
+      placeholder: "https://example.com"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Any additional information?
+    validations:
+      required: false

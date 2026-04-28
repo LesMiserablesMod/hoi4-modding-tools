@@ -1,0 +1,71 @@
+name: Add a tool
+description: Suggest a HOI4 modding tool to be added to the catalog.
+title: "[Tool] "
+labels: ["tool-suggestion"]
+body:
+  - type: input
+    id: tool_name
+    attributes:
+      label: Tool name
+      description: Name of the tool.
+      placeholder: "HOI4 Province Editor"
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Main link to the tool, repository, website, or release page.
+      placeholder: "https://github.com/example/example"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this tool belong to?
+      options:
+        - Map
+        - Focus Tree
+        - Localisation
+        - GFX
+        - Scripting
+        - Validation
+        - Workshop
+        - General
+        - Unsure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Web
+        - Cross-platform
+        - Unknown
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Briefly describe what this tool does.
+      placeholder: "This tool helps HOI4 modders edit province maps..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any known limitations, setup issues, or compatibility notes?
+    validations:
+      required: false

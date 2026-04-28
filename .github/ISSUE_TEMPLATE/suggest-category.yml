@@ -1,0 +1,29 @@
+name: Suggest a category
+description: Suggest a new catalog category or a category reorganization.
+title: "[Category] "
+labels: ["category-suggestion"]
+body:
+  - type: input
+    id: category_name
+    attributes:
+      label: Category name
+      description: Proposed category name.
+      placeholder: "Map Validation"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why should this category exist or change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example tools
+      description: List tools or resources that would belong in this category.
+    validations:
+      required: false

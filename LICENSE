@@ -1,0 +1,36 @@
+Copyright (c) LesMiserablesMod contributors.
+
+This repository contains multiple types of content and uses different licenses
+for different parts of the project.
+
+1. Documentation, catalog entries, tool descriptions, guides, examples,
+   website content, and other non-code materials are licensed under:
+
+   Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+   (CC BY-NC-SA 4.0)
+
+   See:
+   licenses/LICENSE-DOCS-CC-BY-NC-SA-4.0
+
+2. Source code developed in this repository is licensed under:
+
+   GNU Affero General Public License v3.0 or later
+   (AGPL-3.0-or-later)
+
+   See:
+   licenses/LICENSE-CODE-AGPL-3.0-or-later
+
+3. Third-party tools, projects, repositories, websites, documents, images,
+   trademarks, and other external resources mentioned or linked in this
+   repository belong to their respective authors or owners and are governed
+   by their own licenses and terms.
+
+Unless explicitly stated otherwise:
+
+- Files under `tools/` are licensed under AGPL-3.0-or-later.
+- Documentation content under `apps/docs/`, root README files, and project
+  templates are licensed under CC BY-NC-SA 4.0.
+
+When reusing, redistributing, translating, or adapting the catalog,
+documentation, or website content, you must provide clear attribution to this
+project and link back to the original repository.

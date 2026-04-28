@@ -1,0 +1,14 @@
+{
+  "title": "工具目录",
+  "pages": [
+    "index",
+    "map-tools",
+    "focus-tree-tools",
+    "localisation-tools",
+    "gfx-tools",
+    "scripting-tools",
+    "validation-tools",
+    "workshop-tools",
+    "general-tools"
+  ]
+}
