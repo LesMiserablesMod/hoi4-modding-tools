@@ -19,9 +19,9 @@ The project is maintained by the **LesMiserablesMod** community. It helps HOI4 m
 
 ## Main sections
 
-- [Catalog](docs/catalog) - Tools grouped by HOI4 modding workflow.
-- [Resources](docs/resources) - Official links, community guides, and tutorials.
-- [Contribute](docs/contribute) - How to suggest tools, update entries, and contribute code.
+- [Catalog](/en/docs/catalog) - Tools grouped by HOI4 modding workflow.
+- [Resources](/en/docs/resources) - Official links, community guides, and tutorials.
+- [Contribute](/en/docs/contribute) - How to suggest tools, update entries, and contribute code.
 
 ## License summary
 

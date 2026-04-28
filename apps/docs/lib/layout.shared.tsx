@@ -26,8 +26,5 @@ export function baseOptions(): BaseLayoutProps {
     },
     githubUrl: 'https://github.com/LesMiserablesMod/hoi4-modding-tools',
     i18n: true,
-    themeSwitch: {
-      enabled: false,
-    },
   };
 }

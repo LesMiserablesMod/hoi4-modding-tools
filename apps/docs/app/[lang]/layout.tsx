@@ -21,9 +21,6 @@ export default async function RootLayout({ params, children }: LayoutProps) {
           api: `${basePath}/api/search`,
         },
       }}
-      theme={{
-        enabled: false,
-      }}
     >
       {children}
     </RootProvider>
