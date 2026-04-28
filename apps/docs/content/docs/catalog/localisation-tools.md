@@ -15,6 +15,12 @@ description: Tools for editing, checking, converting, or validating HOI4 localis
 - **License**: CC BY-NC-SA 4.0
 - **Language**: TypeScript
 
+### Preview
+
+The image below is loaded from the upstream README and remains hosted by the original project.
+
+![Paradox Translation Toolkit screenshot](./images/paradox-translation-toolkit-1.png)
+
 ### Use case
 
 Use this to generate missing localisation files for selected languages from an existing source language in Paradox game mods.
