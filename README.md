@@ -1,24 +1,42 @@
 # HOI4 Modding Tools
 
-A curated collection of tools, resources, editors, scripts, validators, and references for Hearts of Iron IV mod development.
+**English** | [简体中文](README.zh-CN.md)
 
-This project is maintained by the **LesMiserablesMod** community. It aims to help HOI4 modders discover useful tools, compare their use cases, and build a more reliable modding workflow.
+A bilingual catalog of tools, references, editors, scripts, validators, asset collections, and workflow notes for Hearts of Iron IV mod development.
+
+This project is maintained by the **LesMiserablesMod** community. Its goal is to help HOI4 modders find useful tools, understand what each tool is good for, and build a more reliable modding workflow.
+
+## About LesMiserablesMod
+
+[LesMiserablesMod](https://github.com/LesMiserablesMod?view_as=public) is the development group behind the Les Misérables HOI4 mod project.
+
+The team values respectful collaboration, quality-first development, clear documentation, code review, and consistent project conventions. This catalog is part of that shared workflow: it collects external tools and references that help with maps, focus trees, localisation, GFX assets, scripting, validation, and publishing.
+
+The same resources may also be useful to other HOI4 modders building or maintaining large mods.
+
+## Documentation
+
+The documentation site is built with **Fumadocs** and deployed with GitHub Pages.
+
+- Site root: <https://lesmiserablesmod.github.io/hoi4-modding-tools/>
+- English docs: <https://lesmiserablesmod.github.io/hoi4-modding-tools/en/docs>
+- Simplified Chinese docs: <https://lesmiserablesmod.github.io/hoi4-modding-tools/zh-CN/docs>
+
+The site root redirects to the Simplified Chinese documentation. Use the language switcher in the documentation UI to switch between English and Simplified Chinese.
 
 ## Featured Tools
 
-> This section highlights several useful HOI4 modding tools. The full catalog is available in the documentation and category pages.
-
 - [HOI4 Modding Wiki](https://hoi4.paradoxwikis.com/Modding) - Official community-maintained reference for HOI4 modding.
-- [HOI4 Province Editor](https://github.com/ScottyThePilot/hoi4_province_editor) - A province editing tool for HOI4 map development.
+- [HOI4 Province Editor](https://github.com/ScottyThePilot/hoi4_province_editor) - Province editing tool for HOI4 map development.
 - [CWTools](https://github.com/cwtools/cwtools) - Parser, validator, and language tooling for Clausewitz engine games.
-- [Paradox Translation Toolkit](https://github.com/khoeos/paradox-translation-toolkit/) - A localisation file management tool for Paradox games.
-- [Ultimate-HOI4-GFX](https://github.com/Globvs/Ultimate-HOI4-GFX) - A GFX asset collection for HOI4 modders.
+- [Paradox Translation Toolkit](https://github.com/khoeos/paradox-translation-toolkit/) - Localisation file management tool for Paradox games.
+- [Ultimate-HOI4-GFX](https://github.com/Globvs/Ultimate-HOI4-GFX) - GFX asset collection for HOI4 modders.
 - [Irony Mod Manager](https://github.com/bcssov/IronyModManager) - Mod manager for Paradox games.
-- [Jomini](https://github.com/nickbabcock/jomini) - Parser library for Clausewitz/Jomini data files.
+- [Jomini](https://github.com/nickbabcock/jomini) - Parser library for Clausewitz and Jomini data files.
 
 ## Catalog
 
-The catalog is organized by modding area:
+Catalog pages are stored as Markdown under `apps/docs/content/docs/catalog/`.
 
 - [Map & Province Tools](apps/docs/content/docs/catalog/map-tools.md)
 - [Focus Tree Tools](apps/docs/content/docs/catalog/focus-tree-tools.md)
@@ -35,50 +53,87 @@ The catalog is organized by modding area:
 - [Community Guides](apps/docs/content/docs/resources/community-guides.md)
 - [Tutorials](apps/docs/content/docs/resources/tutorials.md)
 
-## Documentation Site
-
-This project uses **Fumadocs** for the documentation website.
-
-The documentation source is located under:
-
-```text
-apps/docs/
-```
-
-Local documentation routes:
-
-- English: `http://localhost:3000/hoi4-modding-tools/en/docs`
-- Simplified Chinese: `http://localhost:3000/hoi4-modding-tools/zh-CN/docs`
-
-The same path structure is used for GitHub Pages:
-
-```text
-https://<owner>.github.io/hoi4-modding-tools/
-```
-
 ## Repository Structure
 
 ```text
 hoi4-modding-tools/
-├── apps/docs/      # Fumadocs documentation site
-├── tools/          # Source code for tools developed in this repository
-├── licenses/       # License texts for code and documentation
-└── .github/        # Issue templates and pull request templates
+├── apps/docs/       # Fumadocs documentation site and Markdown content
+├── tools/           # Source code for tools developed in this repository
+├── licenses/        # License texts for code and documentation content
+├── .github/         # Issue templates, PR template, and GitHub Actions
+├── LICENSE          # Repository-level license policy summary
+├── README.md
+└── README.zh-CN.md
 ```
+
+The older root-level `catalog/`, `resources/`, `docs/`, and `examples/` directories have been removed to avoid maintaining duplicate documentation. The documentation site is now the single source of truth.
+
+## Writing Documentation
+
+Write documentation pages in regular Markdown (`.md`) by default.
+
+Use `.mdx` only when a page genuinely needs React or JSX components. This keeps the catalog easier to edit in normal Markdown editors and avoids MDX-specific rendering limitations for plain documentation.
+
+Content lives in:
+
+```text
+apps/docs/content/docs/
+```
+
+Bilingual pages use this naming pattern:
+
+```text
+page.md
+page.zh-CN.md
+```
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the documentation site locally:
+
+```bash
+npm run docs:dev
+```
+
+Build the site before publishing or checking deployment output:
+
+```bash
+npm run docs:build
+```
+
+When changing app code or configuration, run:
+
+```bash
+npm run docs:types
+```
+
+## Deployment
+
+The documentation site is deployed to GitHub Pages by GitHub Actions:
+
+```text
+.github/workflows/deploy-docs.yml
+```
+
+The workflow builds the static site and publishes `apps/docs/out`. In repository settings, GitHub Pages should use **GitHub Actions** as the source.
 
 ## Contributing
 
-Contributions are welcome.
+Contributions are welcome. You can help by:
 
-You can help by:
-
-- Suggesting a new HOI4 modding tool.
+- Suggesting new HOI4 modding tools.
 - Updating outdated tool information.
 - Reporting broken links.
 - Improving descriptions, categories, and usage notes.
-- Contributing tools developed under this project.
+- Contributing self-developed tools under `tools/`.
 
-Before submitting a pull request, please read:
+Before opening a pull request, read:
 
 - [Add a Tool](apps/docs/content/docs/contribute/add-a-tool.md)
 - [Writing Style](apps/docs/content/docs/contribute/writing-style.md)
@@ -86,15 +141,14 @@ Before submitting a pull request, please read:
 
 ## License
 
-This repository uses different licenses for different parts of the project.
+This repository uses different licenses for different types of content.
 
 - Documentation, catalog entries, tool descriptions, guides, examples, and website content are licensed under **CC BY-NC-SA 4.0**.
 - Source code developed in this repository is licensed under **AGPL-3.0-or-later**, unless otherwise stated.
-- Third-party tools and resources linked or mentioned in this project belong to their respective authors and are governed by their own licenses.
-
-When reusing, redistributing, translating, or adapting the catalog or documentation, please provide clear attribution to this project and link back to the original repository.
+- Third-party tools and resources linked or mentioned in this project belong to their respective authors and are governed by their own licenses and terms.
 
 See:
 
+- [Repository License Policy](LICENSE)
 - [Code License](licenses/LICENSE-CODE-AGPL-3.0-or-later)
 - [Documentation License](licenses/LICENSE-DOCS-CC-BY-NC-SA-4.0)

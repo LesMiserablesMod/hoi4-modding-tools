@@ -22,7 +22,19 @@ export const i18nUI = defineI18nUI(i18n, {
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: 'HOI4 Modding Tools',
+      title: (
+        <>
+          <img
+            alt=""
+            aria-hidden="true"
+            className="size-5 rounded-sm"
+            height={20}
+            src={`${basePath}/favicon.svg`}
+            width={20}
+          />
+          <span>HOI4 Modding Tools</span>
+        </>
+      ),
     },
     githubUrl: 'https://github.com/LesMiserablesMod/hoi4-modding-tools',
     i18n: true,

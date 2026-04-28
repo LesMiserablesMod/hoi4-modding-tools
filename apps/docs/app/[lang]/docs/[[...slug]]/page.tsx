@@ -54,8 +54,14 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     notFound();
   }
 
+  const isIndexPage = !params.slug?.length;
+
   return {
-    title: page.data.title,
+    title: isIndexPage
+      ? {
+          absolute: page.data.title,
+        }
+      : page.data.title,
     description: page.data.description,
   };
 }
